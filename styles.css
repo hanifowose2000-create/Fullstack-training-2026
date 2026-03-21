@@ -1,0 +1,39 @@
+body{
+    background-color: lightblue;
+}
+
+h1 {
+  color: blue;
+}
+
+h1 .first {
+  color:aqua
+}
+
+h1 .first-child{
+   color: red;
+}
+
+#first {
+  color:blueviolet
+}
+
+
+.button{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 2px;
+
+   /*padding:10px;*/
+
+    padding:4px 12px;
+
+    /* padding = 10px; == l-10 r-10 t-10 b-10 */
+
+    /* px ,em, rem, % */
+}
