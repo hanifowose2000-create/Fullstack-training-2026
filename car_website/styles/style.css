@@ -77,9 +77,9 @@ nav {
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     color: var(--dark);
-    text-decoration: none;
-    text-transform: uppercase;
     background: var(--gold);
+    text-transform: uppercase;
+    text-decoration: none;
     padding: 10px 24px;
     border-radius: 4px;
 }
@@ -104,7 +104,7 @@ nav {
 .hero-bg {
 position:absolute;
 inset: 0;
-background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 0%, transparent 60%), radial-gradient(eclips 50% 805 at 80% 20%, rgba(201, 168, 76, 0.06) 0% transparent 60%), linear-gradient(135deg, #0d0c0a 0%, #1a1917 50%, #0d0c0a);
+background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 0%, transparent 60%), radial-gradient(eclipse 50% 80% at 80% 20%, rgba(201, 168, 76, 0.06) 0%, transparent 60%), linear-gradient(135deg, #0d0c0a 0%, #1a1917 50%, #0d0c0a);
 }
 
 .hero-grid {
@@ -120,7 +120,7 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     right: -5%;
     top: 50%;
     transform: translateY(-50%);
-    width:65%;
+    width: 65%;
     animation: jump 6s ease-in-out infinite;
 }
 
@@ -143,13 +143,13 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     position: absolute;
     top: 48px;
     left: 60px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.6rem;
     letter-spacing: 0.3em;
     color: var(--gold);
     text-transform: uppercase;
-    writing-mode:vertical-rl;
-    transform:rotate(180deg);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     opacity: 0.6;
 }
 
@@ -192,7 +192,7 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     font-size: 0.45em;
     font-weight: 300;
     letter-spacing: 0.08em;
-    color: var(--gold --gold-light);
+    color: var(--gold-light);
     padding-left: 4px;
 }
 
@@ -242,7 +242,6 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     z-index: 1;
 }
 
-
 .btn-secondary {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
@@ -263,8 +262,9 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
 .btn-secondary::before {
     content: '->';
     font-size: 1rem;
-    color:var(--gold);
+    color: var(--gold);
 }
+
 
 .hero-stats {
     position: absolute;
@@ -298,4 +298,95 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
 }
     
 /* hero styles ends here */
+
+
+/* marquee starts here */
+
+.marquee-strip {
+    background: var(--gold);
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-inner {
+    display: inline-flex;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    color: var(--dark);
+    padding: 0 40px;
+}
+
+.marquee-dot {
+    color: var(--rust);
+}
+
+@keyframes marquee {
+    from { transform: translateX(0);}
+    to { transform: translateX(-50%);}
+}
+
+/* marquee end here */
+
+/* car model start here */
+
+.models {
+    background: var(--carbon);
+    padding: 120px 60px;
+}
+
+.section-header {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 70px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: var(--gold);
+}
+
+.section-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    letter-spacing: 0.05em;
+}
+
+.section-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.section-link:hover {
+    opacity: 1;
+}
+
+/* car model end here */
 
