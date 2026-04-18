@@ -42,7 +42,7 @@ nav {
   padding: 28px 60px;
   width: 100%;
   text-decoration: none;
-  /* background-color: var(--muted); */
+  /*background-color: var(--muted);*/
 }
 
 .nav-links {
@@ -387,6 +387,158 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
 .section-link:hover {
     opacity: 1;
 }
+
+.models-grid {
+   /* margin-top: 72px;*/
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.models-card {
+    position: relative;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.model-card:first-child {
+    grid-row: span 2;
+}
+
+.models-visual {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.model-card:first-child .models-visual {
+    height: 340px;
+}
+
+.models-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+}
+
+.model-card:hover.models-bg {
+    transform: scale(1.05);
+}
+
+.bg-1 {
+    background: radial-gradient(eclipse at 40% 60%, rgba(139, 58, 42, 0.3) 0%, rgba(13, 12, 10, 1) 70%);
+}
+
+.bg-1 {
+    background: radial-gradient(eclipse at 60% 40%, rgba(201, 168, 76, 0.3) 0%, rgba(13, 12, 10, 1) 70%);
+}
+
+.bg-1 {
+    background: radial-gradient(eclipse at 50% 50%, rgba(139, 58, 42, 0.3) 0%, rgba(13, 12, 10, 1) 70%);
+}
+
+.bg-1 {
+    background: radial-gradient(eclipse at 30% 60%, rgba(139, 58, 42, 0.3) 0%, rgba(13, 12, 10, 1) 70%);
+}
+
+.bg-1 {
+    background: radial-gradient(eclipse at 70% 40%, rgba(139, 58, 42, 0.3) 0%, rgba(13, 12, 10, 1) 70%);
+}
+
+.another-class {
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    height: 100%;
+
+}
+
+.model-info {
+    padding: 28px 32px 32px;
+    border-top: 1px solid var(--border);
+}
+
+.model-badge {
+    font-size:0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.model-name {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.model-tagline {
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    font-style:italic;
+    margin-bottom: 20px;
+}
+
+.model-spec {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.spec-val {
+    font-size: 1.4rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+}
+
+.spec-key {
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.model-price {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    text-transform: uppercase;
+}
+
+.price-label {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+}
+
+.price-val {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: var(--cream);
+}
+.price-btn {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    background: var(--muted);
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.price-btn:hover {
+    background-color: var(--gold-light);
+    color: var(--dark);
+}
+
 
 /* car model end here */
 
