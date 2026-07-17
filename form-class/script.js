@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     // basic password check
-    const password = document.getElementById("password").Value;
+    const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").Value;
 
     if (password !== confirmPassword) {
@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkedPassword = password;
 
     const formData = {
-      firstName: document.getElementById("firstName").Value,
-      lastName: document.getElementById("lastName").Value,
-      gender: document.getElementById("gender").Value,
-      phoneNumber: document.getElementById("phoneNumber").Value,
-      dob: document.getElementById("dob").Value,
-      address: document.getElementById("address").Value,
-      extfirstName: document.getElementById("extFirstName").Value,
-      extLastName: document.getElementById("extLastName").Value,
-      extPhoneNumber: document.getElementById("extPhoneNumber").Value,
-      extEmail: document.getElementById("extEmail").Value,
-      accountType: document.getElementById("accountType").Value,
-      idType: document.getElementById("idType").Value,
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      gender: document.getElementById("gender").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      dob: document.getElementById("dob").value,
+      address: document.getElementById("address").value,
+      extFirstName: document.getElementById("extFirstName").value,
+      extLastName: document.getElementById("extLastName").value,
+      extPhoneNumber: document.getElementById("extPhoneNumber").value,
+      extEmail: document.getElementById("extEmail").value,
+      accountType: document.getElementById("accountType").value,
+      idType: document.getElementById("idType").value,
       password: checkedPassword,
     }
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function displaySavedData() {
     const data = JSON.parse(sessionStorage.getItem("registrations")) || [];
 
-    if(data.lenght === 0) {
+    if(data.length === 0) {
         output.innerHTML = "<p>No registration saved Yet!</p>";
           return;
     }
@@ -68,13 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>Registration #${index + 1}</h3>
         <p>Name: ${entry.firstName} ${entry.lastName}</p>
         <p>Gender: ${entry.gender}</p>
-        <p>Phone: ${entry.phone}</p>
+        <p>Phone: ${entry.phoneNumber}</p>
         <p>Date Of Birth: ${entry.dob}</p>
         <p>Address: ${entry.address}</p>
         <p>External Contact: ${entry.extfirstName} ${entry.extLastName} ${entry.extPhoneNumber} ${entry.extEmail} </p>
         <p>Account Type: ${entry.accountType}</p>
         <p>Id Type: ${entry.idType}</p>
-        <p>: ${entry.gender}</p>
         <hr>
       </div>
       `;        
