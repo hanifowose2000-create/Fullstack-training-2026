@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault(); // stop page reload
 
     // form validations
-    const firstName = document.getElementById("firstName").Value
-    if (firstName.lenght < 8) {
-      alert("firstName too short")
-    }
+    
+    
     // basic password check
     const password = document.getElementById("password").Value;
     const confirmPassword = document.getElementById("confirmPassword").Value;
