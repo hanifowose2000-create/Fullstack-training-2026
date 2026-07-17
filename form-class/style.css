@@ -57,6 +57,11 @@ input, select, textarea, button {
     display: none;
 }
 
+.saved-entry {
+    background-color: #fff;
+    padding: 10px;
+}
+
 @media (width > 600px) {
     body {
         background-color: rgb(226, 169, 169);

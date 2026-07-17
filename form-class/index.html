@@ -1,90 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
 </head>
-
 <body>
-
-
-
   <h1 class="head">Account Registration Form</h1>
-
-  <form class="form-container">
-    <!-- first name, last name, dob, email, gender, phone number, address, ext contact info, account type, id card type, id number, password
-    1. personal details, 2. account information-->
-
-    <div class="personal-info-section">
-      <!-- header, section title -->
-      <h1 class="section-title">Personal Details</h1>
-      
+  <form class="form-container" id="registrationForm">
+   <div class="personal-info-section">
+      <h1 class="section-title">Personal Details</h1>      
       <div class="form-group">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <select>
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <select id="gender">
           <option>Select Gender</option>
           <option value="FEMALE">Female</option>
           <option value="MALE">Male</option>
         </select>
-        <input type="number" placeholder="Phone Number">
-        <input type="date" placeholder="Date of birth">
-        <textarea cols="60" rows="3" placeholder="Full Address"></textarea>
+        <input type="number" id="phoneNumber" placeholder="Phone Number">
+        <input type="date" id="dob" placeholder="Date of birth">
+        <textarea id="address" cols="60" rows="3" placeholder="Full Address"></textarea>
       </div>
-
     </div>
 
     <div class="ext-contact-section">
-
       <h1 class="section-title">External Details</h1>
       <div class="form-group">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="number" placeholder="External Phone Number">
-        <input type="email" placeholder="External Email">
+        <input type="text" id="extFirstName" placeholder="First Name">
+        <input type="text" id="extLastName" placeholder="Last Name">
+        <input type="number" id="extPhoneNumber" placeholder="External Phone Number">
+        <input type="email" id="extEmail" placeholder="External Email">
       </div>
-
     </div>
 
     <div class="account-section">
       <h1 class="section-title">Account Information</h1>
       <div class="form-group">
         <label>Account Type</label>
-        <select>
-          <option value="1">Savings</option>
-          <option value="2">Current</option>
-          <option value="3">Domiciliary</option>
+        <select id="accountType">
+          <option value="SAVINGS">Savings</option>
+          <option value="CURRENT">Current</option>
+          <option value="DOMICILIARY">Domiciliary</option>
         </select>
       </div>
-
       <div class="form-group">
-
         <label>ID Type</label>
-        <select>
-          <option value="1">Voters Card</option>
-          <option value="2">Drivers' License</option>
-          <option value="3">International Passport</option>
-          <option value="4">Others</option>
+        <select id="idType">
+          <option value="VOTERSCARD">Voters Card</option>
+          <option value="DRIVERSLICENSE">Driver's License</option>
+          <option value="INTLPASSPORT">International Passport</option>
+          <option value="OTHERS">Others</option>
         </select>
       </div>
-
     </div>
 
     <div class="password-section">
-      <h5 class="hide">Enter Password</h5>
+      <h5 class="hide">Enter Password here</h5>
       <div class="form-group">
-          <input type="password" placeholder="password">
-          <input type="password" placeholder="re-enter password">
+          <input type="password" id="password" placeholder="password">
+          <input type="password" id="confirmPassword" placeholder="re-enter password">
       </div>
     </div>
 
     <button class="button">Submit</button>
-
   </form>
-    
-</body>
 
+  <!-- where we'll display the saved data -->
+   <div id="output" class="output-section"></div>
+
+   <script src="script.js"></script>    
+</body>
 </html>

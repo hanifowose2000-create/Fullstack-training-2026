@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: white;
+    background-image: url();
+    line-height: 2;
+    font-family: Arial,helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1rem;
+    color: orange;
+    text-align: center;
+    font-style:italic;
+    margin-top: 10rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: orange;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    color: orange;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
