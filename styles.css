@@ -7,18 +7,13 @@ h1 {
   background: blue;
 }
 
-h1 .first {
-  color: chocolate;
+h1.first {
+  color: white;
 }
 
-h1 .first-child{
+h1.first-child{
    color: blueviolet;
 }
-
-#first {
-  color:blue;
-}
-
 
 
 

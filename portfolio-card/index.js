@@ -17,8 +17,8 @@ const cards = cardDetails.map(card => {
     <div class="card">
 
       <img class="card-image"
-        srcset= "${card.image}"
-        alt="Random image from net" />
+        srcset="${card.image}"
+        alt="random image from net"
 
       <div class="card-description">
         <h4 class="card-name">${card.name}</h4>

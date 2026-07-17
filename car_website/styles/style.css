@@ -400,7 +400,7 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     gap: 2px;
 }
 
-.models-card {
+.model-card {
     position: relative;
     background: var(--dark);
     overflow: hidden;
@@ -410,7 +410,7 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     grid-row: span 2;
 }
 
-.models-visual {
+.model-visual {
     height: 240px;
     position: relative;
     overflow: hidden;
@@ -419,17 +419,17 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     justify-content: center;
 } 
 
-.model-card:first-child .models-visual {
+.model-card:first-child .model-visual {
     height: 340px;
 }
 
-.models-bg {
+.model-bg {
     position: absolute;
     inset: 0;
     transition: transform 0.6s ease;
 }
 
-.model-card:hover .models-bg {
+.model-card:hover .model-bg {
     transform: scale(1.05);
 }
 
@@ -488,7 +488,7 @@ background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 
     margin-bottom: 20px;
 }
 
-.model-spec {
+.model-specs {
     display: flex;
     gap: 28px;
     margin-bottom: 24px;
