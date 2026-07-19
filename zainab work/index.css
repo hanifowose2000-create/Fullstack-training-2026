@@ -8,21 +8,21 @@
 }
 
 body {
-    background: white;
-    background-image: url();
-    line-height: 2;
-    font-family: Arial,helvetica, sans-serif;
+    background: linear-gradient(135deg, #fff5e6 0%,#ffe0b3 100%);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     font-weight: bold;
-    padding: 1rem;
-    color: orange;
-    text-align: center;
-    font-style:italic;
-    margin-top: 10rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
 }
 
 h1 {
-    font-size: 3rem;
-    color: orange;
+    font-size: 4rem;
+    color: #ff8c00;
+    letter-spacing: 3px;
+    animation: fadein 1s ease-in;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -30,4 +30,23 @@ h2 {
     font-size: 2rem;
     color: orange;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color:#d35400;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #ff8c00;
+    transition: all 0.3s;
+}
+
+a:hover {
+    background: #ff8c00;
+    color: white;
+}
+
+@keyframes fadein {
+    from{opacity:0; transform: translateY(20px);}
+    to{opacity:1; transform: translateY(0);}
 }

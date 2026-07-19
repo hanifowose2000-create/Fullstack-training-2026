@@ -9,22 +9,42 @@
     <!-- my homepage style sheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
 
-    <!-- Header section -->
-    <header>
-        <h1 class="head">HIGHCRUSTCAKES RECIPE BOOK</h1>
-        <h2> A TREAT FOR YOUR SENSES </h2>
-    </header>
+<body>
+    <!-- header/nav -->
+     <header class="site-header">
+        <div class="logo">
+            <span class="logo-icon"></span>
+            <h1>Highcrustcakes</h1>
+        </div>
+        <nav>
+            <a href="#recipes">Recipes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+     </header>
+
+    <!-- hero section -->
+     <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-tagline">A TREAT FOR YOUR SENSES</h2>
+            <P>Handcrafted cakes and pastries baked with love in Nigeria</P>
+            <a href="#recipes"class="hero-btn">Explore Recipes</a>
+        </div>
+     </section>
+
+     <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search for Vanilla,Chocolate,Doughnut...">
+     </div>
 
     <!-- Main content Gallery -->
-    <main class="recipe-container">
+    <main class="recipe-container" id="recipes">
 
         <!-- Recipe section 1 -->
         <div class="recipe-section">
-           
+            <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600" alt="Vanilla Cake" class="recipe-img">
             <div class="recipe-content">
-                <h2>VANILLA CAKE </h2>
+                <h2>VANILLA CAKE</h2>
                 <span class="recipe-description">A classic vanilla cake recipe that is perfect for any occasion. Moist, fluffy, and full of vanilla flavor.</span>
                 <h3>Ingredient</h3>
                 <ul>
@@ -386,8 +406,44 @@
 
     </main>
     <!-- footer -->
-    <footer>
-        <p>&copy; 2026 My Recipe Blog. All rights reserved.</p>
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Let's Bake Together</h3>
+            <p>Follow us for daily cake inspo & recipes</p>
+
+            <div class="Socials">
+                <a href="http://instagram.com/highcrustcakes"target="_blank"class="social-btn insta">Instagram</a>
+                <a href="http://tiktok.com/@highcrustcakes"target="_blank"class="social-btn tiktok">Tiktok</a>
+                <a href="mailto:highcrustcakes@gmail.com"class="social-btn email">Email Us</a>
+            </div>
+
+            <p class="copyright">&copy;2026 Highcrustcakes. All rights reserved. Made with love in Nigeria</p>
+        </div>
     </footer>
+
+
+ <script>
+ document.addEventListener("DOMContentLoaded", function() {
+   const searchinput=document.getElementById('searchinput');
+   const recipeCards=document.querySelectorAll('.recipe-section');
+
+   searchInput.addEventListener('keyup', function() {
+    let filter = searchInput.value.toLowerCase().trim();
+
+    recipeCards.forEach(card => {
+      let title = card.querySelector('h2').textContent.toLowerCase();
+      let ingredient = card.querySelector('ul').textcontent.toLowerCase();
+
+      // search both title AND ingredients
+      if(title.includes(filter) || ingredients.includes(filter)) {
+        card.style.display="block";// show
+      }else {
+        card.style.display = "none";// hide
+      }
+    });
+   });
+ });
+ </script>
+
 </body>
 </html>
