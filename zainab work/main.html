@@ -7,7 +7,7 @@
     <title>Highcrustcakes Recipe Book</title>
 
     <!-- my homepage style sheet -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -411,7 +411,7 @@
             <h3>Let's Bake Together</h3>
             <p>Follow us for daily cake inspo & recipes</p>
 
-            <div class="Socials">
+            <div class="socials">
                 <a href="http://instagram.com/highcrustcakes"target="_blank"class="social-btn insta">Instagram</a>
                 <a href="http://tiktok.com/@highcrustcakes"target="_blank"class="social-btn tiktok">Tiktok</a>
                 <a href="mailto:highcrustcakes@gmail.com"class="social-btn email">Email Us</a>
@@ -424,7 +424,7 @@
 
  <script>
  document.addEventListener("DOMContentLoaded", function() {
-   const searchinput=document.getElementById('searchinput');
+   const searchInput=document.getElementById('searchInput');
    const recipeCards=document.querySelectorAll('.recipe-section');
 
    searchInput.addEventListener('keyup', function() {
@@ -432,7 +432,7 @@
 
     recipeCards.forEach(card => {
       let title = card.querySelector('h2').textContent.toLowerCase();
-      let ingredient = card.querySelector('ul').textcontent.toLowerCase();
+      let ingredients = card.querySelector('ul').textContent.toLowerCase();
 
       // search both title AND ingredients
       if(title.includes(filter) || ingredients.includes(filter)) {
