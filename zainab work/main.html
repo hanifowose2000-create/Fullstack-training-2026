@@ -10,28 +10,18 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 
-<body>
-    <!-- header/nav -->
-     <header class="site-header">
-        <div class="logo">
-            <span class="logo-icon"></span>
-            <h1>Highcrustcakes</h1>
-        </div>
-        <nav>
-            <a href="#recipes">Recipes</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-     </header>
-
-    <!-- hero section -->
-     <section class="hero">
-        <div class="hero-content">
-            <h2 class="hero-tagline">A TREAT FOR YOUR SENSES</h2>
-            <P>Handcrafted cakes and pastries baked with love in Nigeria</P>
-            <a href="#recipes"class="hero-btn">Explore Recipes</a>
-        </div>
-     </section>
+<body class="recipes">
+ <header class="site-header">
+    <div class="logo">
+        <span class="logo-icon"></span>
+        <h1>Highcrustcakes</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+ </header>
 
      <div class="search-wrapper">
         <input type="text" id="searchInput" placeholder="Search for Vanilla,Chocolate,Doughnut...">
@@ -93,7 +83,7 @@
            
             <div class="recipe-content">
                 <h2> DOUGHTNUT </h2>
-                <span class="recipe-description">A classic vanilla cake recipe that is perfect for any occasion. Moist, fluffy, and full of vanilla flavor.</span>
+                <span class="recipe-description">Soft fried doughnuts with sugar glaze</span>
                 <h3>Ingredient</h3>
                 <ul>
                    <li> 50gram of butter </li>
@@ -187,7 +177,7 @@
 
             <div class="recipe-content">
                 <h2>RED VELVET (BUTTERBASE) CAKE </h2>
-                <span class="recipe-description">A classic red velvet cake recipe that is perfect for any occasion. Moist, fluffy, and full of red velvet flavor.</span>
+                <span class="recipe-description">Soft, velvety with cream cheese frosting</span>
                 <h3>Ingredient</h3>
                 <ul>
                     500gram of batter
@@ -224,7 +214,8 @@
 
             <div class="recipe-content">
                 <h2>CHOCOLATE (BUTTERBASE) CAKE </h2>
-                <span class="recipe-description">A classic chocolate cake recipe that is perfect for any occasion. Moist, fluffy, and full of chocolate flavor.</span>
+                <span class="recipe-description">Rich, moist and chocolatey goodness
+                    .</span>
                 <h3>Ingredient</h3>
                 <ul>
                     250gram of batter
@@ -407,42 +398,36 @@
     </main>
     <!-- footer -->
     <footer id="contact">
-        <div class="footer-content">
-            <h3>Let's Bake Together</h3>
-            <p>Follow us for daily cake inspo & recipes</p>
+      <h3>Highcrustcakes</h3>
+      <p>Follow us for more recipes and baking tips</p>
 
-            <div class="socials">
-                <a href="http://instagram.com/highcrustcakes"target="_blank"class="social-btn insta">Instagram</a>
-                <a href="http://tiktok.com/@highcrustcakes"target="_blank"class="social-btn tiktok">Tiktok</a>
-                <a href="mailto:highcrustcakes@gmail.com"class="social-btn email">Email Us</a>
-            </div>
+      <div class="socials">
+        <a href="#" class="social-btn insta">Instagram</a>
+        <a href="#" class="social-btn tiktok">Tiktok</a>
+        <a href="mailto:highcrustcakes@gmail.com"class="social-btn email">Email Us</a>
+      </div>
 
-            <p class="copyright">&copy;2026 Highcrustcakes. All rights reserved. Made with love in Nigeria</p>
-        </div>
+      <p class="copyright">&copy;2026 Highcrustcakes. All rights reserved.</p>
     </footer>
 
 
  <script>
- document.addEventListener("DOMContentLoaded", function() {
    const searchInput=document.getElementById('searchInput');
-   const recipeCards=document.querySelectorAll('.recipe-section');
+   const recipeSections=document.querySelectorAll('.recipe-section');
 
-   searchInput.addEventListener('keyup', function() {
-    let filter = searchInput.value.toLowerCase().trim();
+   searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
 
-    recipeCards.forEach(card => {
-      let title = card.querySelector('h2').textContent.toLowerCase();
-      let ingredients = card.querySelector('ul').textContent.toLowerCase();
+    recipeSections.forEach(section => {
+      const recipeText= section.textContent.toLowerCase();
 
-      // search both title AND ingredients
-      if(title.includes(filter) || ingredients.includes(filter)) {
-        card.style.display="block";// show
+      if(recipeText.includes(searchTerm)) {
+        section.style.display="block";
       }else {
-        card.style.display = "none";// hide
+        section.style.display = "none";
       }
     });
    });
- });
  </script>
 
 </body>
