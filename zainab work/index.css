@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wgth@700&family=Poppins:wgth@300;400;600&display=swap');
 
+/* highcrustcakes color pallette */
+:root {
+    --hc-primary:#ff8c00;/* orange - buttons, headings */
+    --hc-secondary:#ffc876; /* light orange - hover,accents */
+    --hc-bg-light:#fffdf9; /*main background */
+    --hc-bg-cream:#fff5e6;/* section background */
+    --hc-bg-dark:#4a3b2a;/* maintext-brown */
+    --hc-white:#ffffff; 
+}
+
+/* usage examples
+color:var(--hc-primary);
+background:var(--hc-bg-cream);
+*/
+
 *,
 *::before,
 *::after {
@@ -129,6 +144,7 @@ body {
     font-family: 'Playfair Display', serif ;
     font-size: 2.5rem;
     color: #ff8c00;
+    text-align: center;
 }
 
 .about p {
@@ -138,7 +154,7 @@ body {
 }
 
 /* feature section */
-.feature {
+.features {
     padding: 5rem 5%;
     background: #fff5eb;
 }
